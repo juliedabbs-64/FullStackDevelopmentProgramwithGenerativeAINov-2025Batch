@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+        function addOperation() {
+            // receive the value using id attribute 
+            var firstNumberValue = document.getElementById("n1").value
+            var secondNumberValue = document.getElementById("n2").value
+            var sum = eval(firstNumberValue)+eval(secondNumberValue)
+            //console.log(sum)
+            document.getElementById("n3").value=sum
+                document.getElementById("output").innerHTML=sum // set the value for non editable tag 
+            document.getElementById("n1").value=""
+            document.getElementById("n2").value=""
+        }
+        function subOperation() {
+            // receive the value using name attribute 
+            var firstNumberValue = document.getElementsByName("num")[0].value
+            var secondNumberValue = document.getElementsByName("num")[1].value
+            var sub = eval(firstNumberValue)-eval(secondNumberValue)
+            //console.log(sum)
+            document.getElementsByName("result")[0].value=sub
+            document.getElementsByName("num")[0].value=""
+            document.getElementsByName("num")[1].value=""
+        }
+        function update(){
+            let h2TagValue = document.getElementsByTagName("h2")[0].innerHTML;
+            //console.log(h2TagValue)
+            document.getElementsByTagName("h2")[0].innerHTML=h2TagValue+" Parser"
+        }
+    </script>
+</head>
+<body>
+        <h2>DOM Hierarchy</h2>
+    1st Number :<input type="text" name="num" id="n1"/><br/>
+    2nd Number :<input type="text" name="num" id="n2"/><br/>
+    Result :<input type="text" name="result" id="n3" readonly/><br/>
+        <div id="output"></div>
+    <input type="button" value="Add Number" onclick="addOperation()"/>
+    <input type="button" value="Sub Number" onclick="subOperation()"/>
+    <input type="button" value="Update Heading" onclick="update()"/>
+</body>
+</html>
