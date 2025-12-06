@@ -18,11 +18,27 @@
 // console.log(num3);      // it display all elements in string format 
 
 //splice method help add or remove element in between from array
-let num4 = [100,200,300,400,500]
-console.log(num4)
+// let num4 = [100,200,300,400,500]
+// console.log(num4)
 //num4.splice(2,1);       // 1st parameter index position and 2nd parameter number of element to delete 
 //num4.splice(2,2);       // 1st parameter index position and 2nd parameter number of element to delete 
 //num4.splice(2,0,1000);// 1st parameter index, 2nd number of element to delete and 3rd,4th,5th element add
 //num4.splice(3,0,1000,2000,3000);
-num4.splice(3,2,4000,5000);
-console.log(num4)
+// num4.splice(3,2,4000,5000);
+// console.log(num4)
+
+let num5 = [10,20,30,40,50];
+console.log(num5);
+    let num6 = num5;    // call num5 value copy in num6 with reference. deep copy 
+console.log("num5 "+num5)
+console.log("num6 "+num6)
+num6.push(60);
+console.log("num5 "+num5)
+console.log("num6 "+num6)
+    let num7 = num5.slice();    // copy num5 value to num7. it only copy value not reference. 
+console.log("After slice")
+console.log("num5 "+num5)
+console.log("num7 "+num7)
+    num7.push(70)
+console.log("num5 "+num5)
+console.log("num7 "+num7)
